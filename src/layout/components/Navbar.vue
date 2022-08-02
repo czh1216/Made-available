@@ -1,7 +1,14 @@
 <template>
   <div class="navbar">
-    <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+    <!-- Logo -->
+    <img src="../../assets/imgs/logo1.png" alt="">
+    <!-- Logo -->
 
+    <!-- 信息 -->
+    <div></div>
+    <!-- 信息 -->
+
+    <!-- <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
     <breadcrumb class="breadcrumb-container" />
 
     <div class="right-menu">
@@ -22,12 +29,13 @@
           <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
             <el-dropdown-item>Docs</el-dropdown-item>
           </a>
-          <el-dropdown-item divided @click.native="logout">
+          <el-dropdown-item divided >
             <span style="display:block;">Log Out</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-    </div>
+    </div> -->
+    <!-- @click.native="logout" -->
   </div>
 </template>
 
@@ -61,11 +69,21 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  height: 50px;
+  width: 100%;
+  height: 60px;
+  z-index: 999999;
   overflow: hidden;
   position: relative;
-  background: #fff;
+  // background: rgb(240, 55, 55);
+  background: url(~@/assets/imgs/banner.png) no-repeat;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  img {
+    width: 88px;
+        position: relative;
+    top: 4px;
+    margin-top: 6px;
+    margin-left: 15px;
+  }
 
   .hamburger-container {
     line-height: 46px;
