@@ -1,24 +1,22 @@
-import request from '@/utils/request'
+import request from "@/utils/request";
 
-export function login(data) {
+/**
+ *  获取验证码
+ * @param {Number} clientToken 随机数
+ * @returns primise
+ */
+export const getFileUpload = (clientToken) => {
   return request({
-    url: '/vue-admin-template/user/login',
-    method: 'post',
-    data
-  })
-}
+    url: `/user-service/user/imageCode/${clientToken}`,
+    method: "GET",
+    responseType: "arraybuffer",
+  });
+};
 
-export function getInfo(token) {
+export const userLogin = (data) => {
   return request({
-    url: '/vue-admin-template/user/info',
-    method: 'get',
-    params: { token }
-  })
-}
-
-export function logout() {
-  return request({
-    url: '/vue-admin-template/user/logout',
-    method: 'post'
-  })
-}
+    url: "/user-service/user/login",
+    method: "POST",
+    data,
+  });
+};

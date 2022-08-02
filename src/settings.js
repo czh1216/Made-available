@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'hrsaas',
+  title: '立可得',
 
   /**
    * @type {boolean} true | false
@@ -12,5 +12,5 @@ module.exports = {
    * @type {boolean} true | false
    * @description Whether show the logo in sidebar
    */
-  sidebarLogo: true
+  sidebarLogo: false
 }

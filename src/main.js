@@ -15,7 +15,6 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 
-// mock假数据
 if (process.env.NODE_ENV === 'production') {
   const { mockXHR } = require('../mock')
   mockXHR()

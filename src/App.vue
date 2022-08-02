@@ -5,8 +5,7 @@
 </template>
 
 <script>
-// npm run dev 项目启动
 export default {
-  name: 'App'
-}
+  name: "App",
+};
 </script>
